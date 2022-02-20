@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Prepare release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v1
+
+      - name: Prepeare needed dir
+        run: |
+          cd /home/runner/work/ha_custom_czujnikimiejskie/ha_custom_czujnikimiejskie/custom_components/czujniki_miejskie
+          zip czujniki_miejskie.zip -r ./
+
+      - name: Upload zip to release
+        uses: svenstaro/upload-release-action@v1-release
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: /home/runner/work/ha_custom_czujnikimiejskie/ha_custom_czujnikimiejskie/custom_components/czujniki_miejskie/czujniki_miejskie.zip
+          asset_name: czujniki_miejskie.zip
+          tag: ${{ github.ref }}
+          overwrite: true

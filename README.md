@@ -20,7 +20,9 @@ This custom integration retrieves data from [https://czujnikimiejskie.pl]
 To install this integration manuall you have to download [*czujniki_miejskie.zip*](https://github.com/kwiatek6324/ha_custom_czujnikimiejskie/releases/latest/download/czujniki_miejskie.zip) and extract its contents to `config/custom_components/czujniki_miejskie` directory:
 
 ```shell
-mkdir -p custom_components/czujnikimiejskie
+cd **HA Config Directory **
+mkdir -p custom_components/czujniki_miejskie
+cd custom_components/czujniki_miejskie
 wget https://github.com/kwiatek6324/ha_custom_czujnikimiejskie/releases/latest/download/czujniki_miejskie.zip
 unzip czujniki_miejskie.zip
 rm czujniki_miejskie.zip
@@ -36,7 +38,7 @@ rm czujniki_miejskie.zip
 
 ### How to retrieve node id ###
 
-You have to visit page [https://czujniki_miejskie.pl](https://czujniki_miejskie.pl)
+You have to visit page [https://czujnikimiejskie.pl](https://czujnikimiejskie.pl)
 Please click link on section **Czujniki smogu** and find nearest sensor for your location.
 Before clicking, please open developpers tools(CTRL+Shift+K) and **Network section**.
 After cliking in history you should find a request for URL:

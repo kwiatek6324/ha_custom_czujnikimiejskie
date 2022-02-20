@@ -1,0 +1,11 @@
+{
+  "domain": "czujniki_miejskie",
+  "name": "Czujniki Miejskie",
+  "documentation": "https://github.com/kwiatek6324",
+  "issue_tracker": "https://github.com/kwiatek6324",
+  "dependencies": [],
+  "codeowners": ["@kwiatek6324"],
+  "requirements": ["requests"],
+  "version": "v1.0.0",
+  "iot_class": "cloud_polling"
+}
